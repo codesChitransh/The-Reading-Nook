@@ -1,0 +1,85 @@
+.Add-page {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #301934;
+    background: linear-gradient(135deg, #301934, #1e0f2b);
+}
+
+.Add-container {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 340px;
+    transition: box-shadow 0.3s ease;
+}
+
+.Add-container:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.Add-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+    color: #301934;
+    font-weight: bold;
+}
+
+.Form-grp {
+    margin-bottom: 20px;
+}
+
+.Form-grp label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #301934;
+    margin-bottom: 8px;
+}
+
+.Form-grp input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+
+.Form-grp input:focus {
+    border-color: #4caf50;
+    outline: none;
+}
+
+.btn-add {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-add:hover {
+    background-color: #45a049;
+}
+
+.btn-add:active {
+    background-color: #388e3c;
+    transform: scale(0.98);
+}
+
+.btn-add:focus {
+    outline: none;
+}

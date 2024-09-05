@@ -1,0 +1,64 @@
+.book-page {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.book-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.book-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.book-card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #301934;
+}
+
+.book-card p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.btn-buy {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-buy:hover {
+    background-color: #45a049;
+}
+
+.btn-buy:active {
+    background-color: #388e3c;
+    transform: scale(0.98);
+}
+
+.btn-buy:focus {
+    outline: none;
+}
