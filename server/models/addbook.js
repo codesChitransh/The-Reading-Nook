@@ -13,6 +13,9 @@ const addbookSchema=new mongoose.Schema({
     price:{
         type:Number,
         required:true
+    },
+    buylink:{
+        type:String
     }
    
 

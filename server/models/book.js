@@ -12,6 +12,9 @@ const bookSchema=new mongoose.Schema({
     price:{
         type:Number,
         required:true
+    },
+    buylink:{
+        type:String
     }
 })
 const bookModel=mongoose.model("books",bookSchema)

@@ -26,6 +26,11 @@ function Book() {
                         <h3>{book.title}</h3>
                         <p><strong>Author:</strong> {book.author}</p>
                         <p><strong>Price:</strong> {book.price}</p>
+                        {book.buylink && (
+                            <a href={book.buylink} target="_blank" rel="noopener noreferrer" className='buy-link'>
+                                Buy Now
+                            </a>
+                        )}
                     </div>
                 ))}
             </div>

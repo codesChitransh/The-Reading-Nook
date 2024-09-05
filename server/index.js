@@ -66,11 +66,11 @@ app.post("/studentsignup", (req, res) => {
 });
 
 app.post('/add', (req, res) => {
-    const { title, author, price } = req.body;
+    const { title, author, price,buylink } = req.body;
 
-    addModel.create({ title, author, price })
+    addModel.create({ title, author, price,buylink })
         .then(book => {
-            bookModel.create({ title, author, price})
+            bookModel.create({ title, author, price,buylink})
                 .then(() => {
                     res.json({
                         book,
