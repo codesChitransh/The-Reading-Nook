@@ -1,4 +1,4 @@
-const port = 3008;
+const port = 3009;
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
@@ -86,12 +86,34 @@ app.get('/books', (req, res) => {
     bookModel.find({})
         .then(books => {
             res.json({
-                books,
+                books, // This should include the _id field by default
                 success: true,
             });
         })
         .catch(err => res.status(500).json({ error: err.message }));
 });
+
+app.delete('/deletebook/:id', (req, res) => {
+    const { id } = req.params;
+
+    bookModel.findByIdAndDelete(id)
+        .then(deletedBook => {
+            if (deletedBook) {
+                res.json({
+                    message: "Book deleted successfully from bookModel",
+                    success: true,
+                });
+            } else {
+                res.status(404).json({
+                    message: "Book not found in bookModel",
+                    success: false,
+                });
+            }
+        })
+        .catch(err => res.status(500).json({ error: `Failed to delete from bookModel: ${err.message}` }));
+});
+
+
 
 app.listen(port, () => {
     console.log(`Server running at port ${port}`);

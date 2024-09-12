@@ -11,7 +11,7 @@ function AddBook() {
     const navigate = useNavigate();
 
     const handleSubmit = () => {
-        axios.post('http://localhost:3008/add', { title, author, price, buylink }) // Include buyLink in request
+        axios.post('http://localhost:3009/add', { title, author, price, buylink }) // Include buyLink in request
             .then(res => {
                 if (res.data.success) {
                     console.log("Successfully added", res.data.book);
@@ -64,7 +64,10 @@ function AddBook() {
                         onChange={(e) => setBuyLink(e.target.value)}
                     /><br/>
                 </div>
-                <button className='btn-add' onClick={handleSubmit}>Add</button>
+                <button className='btn-add' onClick={handleSubmit} disabled={!title || !author || !price || !buylink}>
+                        Add
+                </button>
+
             </div>
         </div>
     )

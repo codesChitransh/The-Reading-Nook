@@ -63,5 +63,33 @@
 }
 
 .buy-link:focus {
-    outline: none; /* Remove default focus outline */
+    outline: none; 
+}
+
+.delete-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #e74c3c; 
+    color: #fff; 
+    text-decoration: none; 
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    border: none; 
+}
+
+.delete-btn:hover {
+    background-color: #c0392b; 
+}
+
+.delete-btn:active {
+    background-color: #a93226;
+    transform: scale(0.98); 
+}
+
+.delete-btn:focus {
+    outline: none; 
 }

@@ -28,6 +28,7 @@ function Navbar() {
                 {user ? (
                     <>  
                         <Link to="/books" className="nav-link">BuyBook</Link> 
+                        
                         <Link to="/adds" className="nav-link">AddBook</Link>
                         <button onClick={handleLogout} className="nav-link btn-logout">Logout</button>
                     </>

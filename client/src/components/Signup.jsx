@@ -8,7 +8,7 @@ function Signup() {
     const [role, setRole] = useState('student');
     const Navigate=useNavigate();
     const handleSubmit = () => {
-        const url = role === 'admin' ? 'http://localhost:3008/adminsignup' : 'http://localhost:3008/studentsignup';
+        const url = role === 'admin' ? 'http://localhost:3009/adminsignup' : 'http://localhost:3008/studentsignup';
         
         axios.post(url, { username, password })
             .then(res => {
