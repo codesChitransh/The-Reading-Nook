@@ -38,14 +38,22 @@
     color: #555;
 }
 
-/* Styling for the "Buy Now" button */
+.book-card input {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
 .buy-link {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 15px;
-    background-color: #4caf50; /* Green background */
-    color: #fff; /* White text */
-    text-decoration: none; /* Remove underline */
+    background-color: #4caf50;
+    color: #fff;
+    text-decoration: none;
     border-radius: 6px;
     font-size: 14px;
     font-weight: bold;
@@ -54,12 +62,12 @@
 }
 
 .buy-link:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #45a049;
 }
 
 .buy-link:active {
-    background-color: #388e3c; /* Even darker green on click */
-    transform: scale(0.98); /* Slight shrink on click */
+    background-color: #388e3c;
+    transform: scale(0.98);
 }
 
 .buy-link:focus {
@@ -72,7 +80,6 @@
     padding: 10px 15px;
     background-color: #e74c3c; 
     color: #fff; 
-    text-decoration: none; 
     border-radius: 6px;
     font-size: 14px;
     font-weight: bold;
@@ -91,5 +98,32 @@
 }
 
 .delete-btn:focus {
+    outline: none; 
+}
+
+.edit-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #3498db; 
+    color: #fff; 
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    border: none; 
+}
+
+.edit-btn:hover {
+    background-color: #2980b9; 
+}
+
+.edit-btn:active {
+    background-color: #1f6392; 
+    transform: scale(0.98); 
+}
+
+.edit-btn:focus {
     outline: none; 
 }

@@ -86,12 +86,33 @@ app.get('/books', (req, res) => {
     bookModel.find({})
         .then(books => {
             res.json({
-                books, // This should include the _id field by default
+                books, 
                 success: true,
             });
         })
         .catch(err => res.status(500).json({ error: err.message }));
 });
+app.put('/edit/:id', (req, res) => {
+    const { id } = req.params;
+    const { title, author, price, buylink } = req.body;
+    bookModel.findByIdAndUpdate(id, { title, author, price, buylink }, { new: true })
+        .then(updatedBook => {
+            if (updatedBook) {
+                res.json({
+                    updatedBook,
+                    message: "Book uodated successfully",
+                    success: true,
+                });
+            } else {
+                res.status(404).json({
+                    message: "Book not found",
+                    success: false,
+                });
+            }
+        })
+        .catch(err => res.status(500).json({ error: `Failed to update book: ${err.message}` }));
+});
+
 
 app.delete('/deletebook/:id', (req, res) => {
     const { id } = req.params;
