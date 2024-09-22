@@ -59,6 +59,7 @@ function Book() {
                             <div>
                                 <input
                                     type="text"
+                                    placeholder='Enter new title'
                                     value={book.title}
                                     onChange={(e) => {
                                         const updatedBook = { ...book, title: e.target.value };
@@ -68,6 +69,7 @@ function Book() {
                                 />
                                 <input
                                     type="text"
+                                    placeholder='Enter new author'
                                     value={book.author}
                                     onChange={(e) => {
                                         const updatedBook = { ...book, author: e.target.value };
@@ -77,6 +79,7 @@ function Book() {
                                 />
                                 <input
                                     type="number"
+                                    placeholder='Enter new price'
                                     value={book.price}
                                     onChange={(e) => {
                                         const updatedBook = { ...book, price: e.target.value };
@@ -86,6 +89,7 @@ function Book() {
                                 />
                                 <input
                                     type="url"
+                                    placeholder='Enter new link'
                                     value={book.buylink}
                                     onChange={(e) => {
                                         const updatedBook = { ...book, buylink: e.target.value };
@@ -94,7 +98,7 @@ function Book() {
                                 />
                                 <button onClick={() => {
                                     handleUpdate(book._id, { title: book.title, author: book.author, price: book.price, buylink: book.buylink });
-                                    toggleEditMode(book._id); // Exit edit mode
+                                    toggleEditMode(book._id);
                                 }}>Update</button>
                                 <button onClick={() => toggleEditMode(book._id)}>Cancel</button>
                             </div>
